@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>AutoDeplojyTemplate Web Application</display-name>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:/application-autodeploy.xml
+		</param-value>
+	</context-param>
+	<!-- root -->
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>AutoDeplojyTemplate.webapp.root</param-value>
+	</context-param>
+	<!-- log -->
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<!--Spring ApplicationContext 载入 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- Spring 刷新Introspector防止内存泄露 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<!-- Filter 定义 -->
+	<!-- Character Encoding filter -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<!-- Filter 映射 -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- Spring MVC Servlet -->
+	<servlet>
+		<servlet-name>springServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<!-- 浏览器不支持put,delete等method,由该filter将_method=delete转换为标准的http delete方法 -->
+	<filter>
+		<filter-name>hiddenHttpMethodFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>hiddenHttpMethodFilter</filter-name>
+		<servlet-name>springServlet</servlet-name>
+	</filter-mapping>
+
+	<!-- Character Encoding filter -->
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>cn.com.easy.deploy.filter.LoginFilter</filter-class>
+	</filter>
+
+	<!-- Filter 映射 -->
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+
+	<!-- 出错页面定义 -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/pages/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/pages/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/pages/error/404.jsp</location>
+	</error-page>
+	<!--  
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>All Resources</web-resource-name>
+			<url-pattern>/login/*</url-pattern>
+			<http-method>GETLIB</http-method>
+			<http-method>COPY</http-method>
+			<http-method>MOVE</http-method>
+			<http-method>DELETE</http-method>
+			<http-method>PROPFIND</http-method>
+			<http-method>GET</http-method>
+			<http-method>HEAD</http-method>
+			<http-method>PUT</http-method>
+			<http-method>MKCOL</http-method>
+			<http-method>PROPPATCH</http-method>
+			<http-method>LOCK</http-method>
+			<http-method>UNLOCK</http-method>
+			<http-method>VERSION-CONTROL</http-method>
+			<http-method>CHECKIN</http-method>
+			<http-method>CHECKOUT</http-method>
+			<http-method>UNCHECKOUT</http-method>
+			<http-method>REPORT</http-method>
+			<http-method>UPDATE</http-method>
+			<http-method>CANCELUPLOAD</http-method>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+		<auth-constraint>
+			<role-name>administrators</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-role>
+		<role-name>administrators</role-name>
+	</security-role>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Auto Deploy Template</realm-name>
+	</login-config>
+	-->
+</web-app>

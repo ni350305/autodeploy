@@ -1,0 +1,66 @@
+body{
+	padding:5px;
+}
+.layout {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	border: 1px solid #9cf;
+	background-color: rgb(240, 247, 253);
+}
+
+.layout .left,.layout .right {
+	float: left;
+	height: 100%;
+}
+
+.layout .left {
+	position: relative;
+	overflow-x: hidden;
+	margin-right:2px;
+	width: 200px;
+	border-right: 1px solid #9cf;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.layout .left .opration {
+	display:none;
+	position: absolute;
+	left:-156px;
+	height: 200px;
+	width: 150px;
+	color: white;
+	background-color: rgb(78, 151, 202);
+	border: 1px solid #9cf;
+	padding:5px 5px 5px 0;
+	opacity:0.5;
+}
+
+.layout .left .opration .label {
+	cursor: pointer;
+	position: absolute;
+	top:70px;
+	right:-20px;
+	height:50px;
+	width:17px;
+	padding:20px 0 0 0;
+	background-color: rgb(78, 151, 202);
+	border: 1px solid rgb(78, 151, 202);
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.layout .left .opration li{
+	cursor: pointer;
+	line-height:20px;
+	width:140px;
+	border-bottom: 1px solid #9cf;
+}
+.layout .right {
+	overflow: hidden;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}

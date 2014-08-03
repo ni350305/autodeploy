@@ -1,0 +1,39 @@
+body {
+	padding: 10px;
+}
+
+.layout {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	border: 1px solid #9cf;
+	background-color: rgb(240, 247, 253);
+}
+
+.logindiv {
+	background-color: rgb(206, 236, 248);
+	border: 1px solid #9cf;
+	border-radius: 6px;
+	height: 150px;
+	width: 300px;
+	padding: 8px 40px;
+	width: 190px;
+	position: fixed;
+	top: 30%;
+	left: 35%;
+}
+
+.loginform div {
+	line-height: 40px;
+}
+
+.loginform input[name='name'],.loginform input[name='passwd'] {
+	
+}
+
+.loginbtn,.resetbtn {
+	float: right;
+}

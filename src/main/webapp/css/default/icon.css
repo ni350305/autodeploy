@@ -1,0 +1,262 @@
+﻿.button {
+	position: relative;
+	margin: 5px;
+	padding: 2px 10px;
+	border-radius: 6px;
+	border: 1px solid rgb(88, 144, 199);
+	color: white;
+	cursor: pointer;
+	background-color: rgb(88, 144, 199);
+}
+
+.button:hover {
+	background-color: rgb(66, 117, 168);
+}
+
+.button:active {
+	background-color: rgb(13, 55, 95);
+}
+
+.i_add {
+	background: url(../../images/default/icons/add.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_back {
+	background: url(../../images/default/icons/back.png) no-repeat 0px 3px;
+	height: 20px;
+}
+
+.i_back:hover {
+	background-color: rgb(88, 144, 199);
+	border-radius: 3px;
+}
+
+.i_forward {
+	background: url(../../images/default/icons/forward.png) no-repeat 0px
+		3px;
+	height: 20px;
+}
+
+.i_forward:hover {
+	background-color: rgb(88, 144, 199);
+	border-radius: 3px;
+}
+
+.i_refresh {
+	background: url(../../images/default/icons/refresh.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_sure {
+	background: url(../../images/default/icons/sure.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_delete {
+	background: url(../../images/default/icons/delete.png) no-repeat 0px 3px;
+	height: 16px;
+	width: 16px;
+}
+
+.i_choose-all {
+	background: url(../../images/default/icons/choose-all.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_chat {
+	background: url(../../images/default/icons/chat.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_magnifier {
+	background: url(../../images/default/icons/magnifier.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_examine {
+	background: url(../../images/default/icons/examine.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_trend-comparison {
+	background: url(../../images/default/icons/trend-comparison.png)
+		no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_edit {
+	background: url(../../images/default/icons/edit.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_details {
+	background: url(../../images/default/icons/details.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_import {
+	background: url(../../images/default/icons/import.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_batch {
+	background: url(../../images/default/icons/batch.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_replace-all {
+	background: url(../../images/default/icons/replace-all.png) no-repeat
+		0px 3px;
+	height: 16px;
+}
+
+.i_attr-value-replace {
+	background: url(../../images/default/icons/attr-value-replace.png)
+		no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_refresh-cache {
+	background: url(../../images/default/icons/refresh-cache.png) no-repeat
+		0px 3px;
+	height: 16px;
+}
+
+.i_add-attr-name {
+	background: url(../../images/default/icons/add-attr-name.png) no-repeat
+		0px 3px;
+	height: 16px;
+}
+
+.i_add-attr-value {
+	background: url(../../images/default/icons/add-attr-value.png) no-repeat
+		0px 3px;
+	height: 16px;
+}
+
+.i_range-replace {
+	background: url(../../images/default/icons/range-replace.png) no-repeat
+		0px 3px;
+	height: 16px;
+}
+
+.i_copy-rule {
+	background: url(../../images/default/icons/copy-rule.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_influence-number {
+	background: url(../../images/default/icons/influence-number.png)
+		no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_view-record {
+	background: url(../../images/default/icons/view-record.png) no-repeat
+		0px 3px;
+	height: 16px;
+}
+
+.i_batch-update {
+	background: url(../../images/default/icons/batch-update.png) no-repeat
+		0px 3px;
+	height: 16px;
+}
+
+.i_sold-out {
+	background: url(../../images/default/icons/sold-out.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_replace {
+	background: url(../../images/default/icons/replace.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_shielding {
+	background: url(../../images/default/icons/plugin_disabled.png)
+		no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_recover {
+	background: url(../../images/default/icons/plugin.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_tab_1 {
+	background: url(../../images/default/icons/tag_orange.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_tab_2 {
+	background: url(../../images/default/icons/tag_blue.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_open-tab {
+	background: url(../../images/default/icons/open-tab.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_auto-delete {
+	background: url(../../images/default/icons/computer_delete.png)
+		no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_modify {
+	background: url(../../images/default/icons/modify.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_billboard {
+	background: url(../../images/default/icons/billboard.png) no-repeat 0px
+		3px;
+	height: 16px;
+}
+
+.i_climb {
+	background: url(../../images/default/icons/climb.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_output {
+	background: url(../../images/default/icons/output.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.i_check {
+	background: url(../../images/default/icons/check.png) no-repeat 0px 3px;
+	height: 16px;
+}
+
+.icon_auth {
+	background: url(../../images/default/icons/auth.png) no-repeat 0px 0px;
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+
+.external_link {
+	background: url(../../images/default/icons/external_link.png) no-repeat
+		0px 3px;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+}

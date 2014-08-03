@@ -1,0 +1,36 @@
+.left .items {
+	position: relative;
+	padding: 5px 5px 5px 5px;
+}
+
+.left .item {
+	line-height: 20px;
+	padding: 5px 5px 0 5px;
+	margin: 0 30px 5px 5px;
+	border-bottom: 1px solid #9cf;
+	font-size: 14px;
+}
+
+.left .item span {
+	cursor: pointer;
+}
+
+.left .item .title {
+	color: white;
+	background-color: rgb(88, 144, 199);
+	line-height: 20px;
+	width: 70px;
+	text-align: center;
+	overflow: hidden;
+	left: 0px;
+	border-top-left-radius: 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+}
+
+.left .item.title {
+	padding: 15px 5px 0 5px;
+	margin: 15px 10px 5px 5px;
+	border-bottom: 1px solid rgb(88, 144, 199);
+}

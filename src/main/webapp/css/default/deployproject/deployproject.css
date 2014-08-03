@@ -1,0 +1,173 @@
+body {
+	font-size: 14px;
+}
+
+.button.index {
+	float: right;
+}
+
+.button.excute {
+	margin-right: 20px
+}
+
+.layout {
+	
+}
+
+p {
+	line-height: 20px;
+}
+
+/** tab项 */
+.layout .header {
+	line-height: 15px;
+	height: 25px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgb(88, 144, 199);
+}
+
+.layout .header .items {
+	position: relative;
+	width: 500px;
+	left: 33%;
+}
+
+.layout .header .h_item {
+	float: left;
+	border-top: 1px solid rgb(88, 144, 199);
+	border-left: 1px solid rgb(88, 144, 199);
+	border-right: 1px solid rgb(88, 144, 199);
+	margin-right: 5px;
+	padding: 5px;
+	cursor: pointer;
+	border-top-left-radius: 6px;
+}
+
+.layout .header .h_item.choosed {
+	color: white;
+	background-color: rgb(88, 144, 199);
+}
+
+.layout .header .h_item.choosed:hover,.layout .header .h_item:hover {
+	color: white;
+	background-color: rgb(110, 178, 245);
+}
+/** 内容项*/
+.layout .content .c_item {
+	padding: 10px 0 0 10px;
+	width: 700px;
+	display: none;
+}
+
+.layout .content .c_item.choosed {
+	display: block;
+}
+
+.layout .content .sub_item {
+	padding: 10px;
+	border-bottom: 1px solid rgb(88, 144, 199);
+	height: 20px;
+	overflow-y: hidden;
+}
+
+.layout .content .sub_item:hover {
+	background-color: rgb(237, 246, 253);
+}
+
+.layout .content .sub_item_auto_height {
+	height: auto;
+	background-color: rgb(237, 246, 253);
+}
+
+.layout .content .sub_item p {
+	line-height: 20px;
+}
+
+.layout .content .sub_item .sub_line_item {
+	padding: 5px 0;
+	line-height: 20px;
+}
+
+.layout .content .sub_item .sub_line_item .taskcontent {
+	padding-left: 60px;
+}
+
+.layout .content .sub_item .sub_edit_item {
+	text-align: right;
+}
+
+.items .item {
+	padding: 5px 0;
+}
+
+.dialog_add_task .taskdetail,.dialog_add_task .deployfile,.dialog_add_task .commands {
+	border: 1px solid rgb(88, 144, 199);
+}
+
+.dialog_add_task .taskdetail {
+	margin: 5px 5px 5px 0;
+	padding: 5px;
+	width: 230px;
+	height: 185px;
+	overflow-y: auto;
+}
+
+.dialog_add_task .deployfile,.dialog_add_task .commands {
+	position: absolute;
+	padding: 2px;
+	top: 0px;
+	right: 0px;
+	width: 250px;
+	top: 0px;
+}
+
+.dialog_add_task .commands {
+	top: 100px;
+}
+
+.dialog_add_task .taskdetail_container {
+	width: 540px;
+}
+
+.dialog_add_task .choose_file_btn_container,.dialog_add_task .choose_commands_btn_container {
+	position: absolute;
+	width: 17px;
+	height: 40px;
+	top: 20px;
+	left: 255px;
+}
+
+.dialog_add_task .choose_commands_btn_container {
+	top: 110px;
+}
+
+.dialog_add_task .taskdetail .button {
+	border: 1px solid white;
+	margin: 1px;
+	padding: 2px;
+	border-radius: 0px;
+}
+
+.rMenu {
+	position: fixed;
+	display: none;
+	font-size: 13px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+	z-index: 1100;
+	background: white;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	width: 100px;
+}
+
+.rMenu  li {
+	padding: 5px;
+	border-bottom: 1px solid #9cf;
+	cursor: pointer;
+}
+
+.rMenu  li:hover {
+	background-color: rgb(240, 247, 253);
+}
